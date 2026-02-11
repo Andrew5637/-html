@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+<link rel="success.html" href="Tony blair.html">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        h2, p {
+            margin: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        ul li {
+            float: left;
+        }
+
+        ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        ul li a:hover {
+            background-color: #FF0000;
+        }
+
+        .boxes-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 200px;
+            margin: 40px auto;
+            max-width: 1000px;
+        }
+
+        .side-boxes {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            flex: 1;
+        }
+
+        .box {
+            width: 250px;
+            height: 100px;
+            background-color: #333333;
+            color: white;
+            cursor: pointer;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .box:hover {
+            background-color: #555555;
+        }
+
+        .middle-box {
+            width: 250px;
+            height: 100px;
+            background-color: #333333;
+            color: white;
+            cursor: pointer;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            flex: 1;
+        }
+
+        .middle-box:hover {
+            background-color: #555555;
+        }
+
+        .panel {
+            width: 300px;
+            background-color: #f0f0f0;
+            border: 2px solid #333333;
+            padding: 20px;
+            margin: 20px auto;
+            display: none;
+            border-radius: 5px;
+        }
+
+        .panel p {
+            color: #333333;
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+  <li><a href="Tony blair.html">Home</a></li>
+  <li><a href="success.html">Successes</a></li>
+  <li><a href="https://labour.org.uk/contact/membership-contact-form/">Contact</a></li>
+</ul>
+
+<center>
+<h1 style ="color:red; font-size:50px;">New labour successes!</h1>
+
+<div class="boxes-container">
+    <div class="side-boxes">
+        <div class="box" onclick="togglePanel('panel1')">
+            <h2 style="color:red; font-size:30px;">Foreign Policy</h2>
+        </div>
+        <div id="panel1" class="panel">
+            <p>Test Run 1</p>
+        </div>
+    </div>
+
+    <div class="side-boxes">
+        <div class="middle-box" onclick="togglePanel('panel2')">
+            <h2 style="color:red; font-size:30px;">Economy</h2>
+        </div>
+        <div id="panel2" class="panel">
+            <p>Test Run 2</p>
+        </div>
+    </div>
+
+    <div class="side-boxes">
+        <div class="box" onclick="togglePanel('panel3')">
+            <h2 style="color:red; font-size:30px;">Healthcare</h2>
+        </div>
+        <div id="panel3" class="panel">
+            <p>Test Run 3</p>
+        </div>
+    </div>
+</div>
+
+</center>
+
+    <script>
+        function togglePanel(panelId) {
+            var panel = document.getElementById(panelId);
+            if (panel.style.display === "none") {
+                panel.style.display = "block";
+            } else {
+                panel.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
